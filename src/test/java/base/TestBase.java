@@ -20,6 +20,8 @@ import utilities.*;
 
 
 public class TestBase {
+    String username = "ewelinabachata-usbg@force.com";
+    String password="Ly5hnn86";
     public static WebDriver driver;
     public static Properties config = new Properties();
     public static Properties OR = new Properties();
@@ -70,37 +72,8 @@ public class TestBase {
             driver = new InternetExplorerDriver();
 
         }
-        try {
 
-            File file = new File("Cookies.data");
-            FileReader fileReader = new FileReader(file);
-            BufferedReader Buffreader = new BufferedReader(fileReader);
-            String strline;
-            while ((strline = Buffreader.readLine()) != null) {
-                StringTokenizer token = new StringTokenizer(strline, ";");
-                while (token.hasMoreTokens()) {
-                    String name = token.nextToken();
-                    String value = token.nextToken();
-                    String domain = token.nextToken();
-                    String path = token.nextToken();
-                    Date expiry = null;
-
-                    String val;
-                    if (!(val = token.nextToken()).equals("null")) {
-                        expiry = new Date(val);
-                    }
-                    Boolean isSecure = new Boolean(token.nextToken()).
-                            booleanValue();
-                    Cookie ck = new Cookie(name, value, domain, path, expiry, isSecure);
-                    System.out.println(ck);
-                    driver.manage().addCookie(ck); // This will add the stored cookie to your current session
-                }
-            }
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-
-            driver.get(config.getProperty("testsiteurl"));
+        driver.get(config.getProperty("testsiteurl"));
         log.debug("Navigate to : "+config.getProperty("testsiteurl"));
         driver.manage().
 
@@ -120,7 +93,7 @@ public class TestBase {
     public void tearDown() {
 
         if (driver != null) {
-            driver.quit();
+          driver.quit();
         }
         log.debug("TEST EXECUTION COMPLETED !!!");
     }

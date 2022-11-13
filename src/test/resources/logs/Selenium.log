@@ -1,6 +1,6 @@
-DEBUG   2022-11-13 10:24:07,896 [main] devpinoyLogger  - Config file loaded
-DEBUG   2022-11-13 10:24:07,898 [main] devpinoyLogger  - OR file loaded
-DEBUG   2022-11-13 10:24:09,727 [main] devpinoyLogger  - Chrome Launched 
-DEBUG   2022-11-13 10:24:10,549 [main] devpinoyLogger  - Navigate to : https://jobinterview.lightning.force.com/lightning/page/home
-DEBUG   2022-11-13 10:24:10,705 [main] devpinoyLogger  - Inside Login Test
-DEBUG   2022-11-13 10:24:37,884 [main] devpinoyLogger  - TEST EXECUTION COMPLETED !!!
+DEBUG   2022-11-13 19:39:11,415 [main] devpinoyLogger  - Config file loaded
+DEBUG   2022-11-13 19:39:11,416 [main] devpinoyLogger  - OR file loaded
+DEBUG   2022-11-13 19:39:13,293 [main] devpinoyLogger  - Chrome Launched 
+DEBUG   2022-11-13 19:39:14,479 [main] devpinoyLogger  - Navigate to : https://jobinterview.lightning.force.com/lightning/page/home
+DEBUG   2022-11-13 19:39:14,652 [main] devpinoyLogger  - Inside Login Test
+DEBUG   2022-11-13 19:39:32,522 [main] devpinoyLogger  - TEST EXECUTION COMPLETED !!!
