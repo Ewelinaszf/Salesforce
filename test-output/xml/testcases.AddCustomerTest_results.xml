@@ -4,34 +4,33 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="13.885">
+           time="15.867">
   <properties />
-            <testcase name="add" time="13.885" classname="testcases.AddCustomerTest">
+            <testcase name="add" time="15.867" classname="testcases.AddCustomerTest">
                 <failure type="org.openqa.selenium.NoSuchElementException"
-                  message="no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Analyst&quot;}
+                  message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains(@title,&apos;Gazprom&apos;)]&quot;}
   (Session info: chrome=107.0.5304.107)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.6.0&apos;, revision: &apos;79f1c02ae20&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.13&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5cadf56f95b103d85585b289bd5ffb12, findElement {using=link text, value=Analyst}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\ESZYMA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56164}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56164/devtoo..., se:cdpVersion: 107.0.5304.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 5cadf56f95b103d85585b289bd5ffb12"
+Command: [bdeecc3c3f3d2cedd3bf220be97f4c49, findElement {using=xpath, value=//div[contains(@title,&apos;Gazprom&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\ESZYMA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56161}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56161/devtoo..., se:cdpVersion: 107.0.5304.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bdeecc3c3f3d2cedd3bf220be97f4c49"
               >
-<![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"Analyst"}
+<![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@title,'Gazprom')]"}
   (Session info: chrome=107.0.5304.107)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.6.0', revision: '79f1c02ae20'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5cadf56f95b103d85585b289bd5ffb12, findElement {using=link text, value=Analyst}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\ESZYMA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56164}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56164/devtoo..., se:cdpVersion: 107.0.5304.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 5cadf56f95b103d85585b289bd5ffb12
+Command: [bdeecc3c3f3d2cedd3bf220be97f4c49, findElement {using=xpath, value=//div[contains(@title,'Gazprom')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\ESZYMA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56161}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56161/devtoo..., se:cdpVersion: 107.0.5304.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bdeecc3c3f3d2cedd3bf220be97f4c49
   java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-  java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+  java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
   java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-  java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-  java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+  java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
   org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
   org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
   org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -43,11 +42,12 @@ Session ID: 5cadf56f95b103d85585b289bd5ffb12
   org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
   org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
   org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-  testcases.AddCustomerTest.add(AddCustomerTest.java:25)
+  base.TestBase.click(TestBase.java:151)
+  testcases.AddCustomerTest.add(AddCustomerTest.java:30)
   java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-  java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+  java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
   java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-  java.base/java.lang.reflect.Method.invoke(Method.java:568)
+  java.base/java.lang.reflect.Method.invoke(Method.java:566)
   org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
   org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
   org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
@@ -56,7 +56,7 @@ Session ID: 5cadf56f95b103d85585b289bd5ffb12
   org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
   org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
   org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-  java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
   org.testng.TestRunner.privateRun(TestRunner.java:806)
   org.testng.TestRunner.run(TestRunner.java:601)
   org.testng.SuiteRunner.runTest(SuiteRunner.java:433)

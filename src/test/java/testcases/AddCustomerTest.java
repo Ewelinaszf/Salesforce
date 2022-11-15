@@ -1,61 +1,64 @@
 package testcases;
 
 import base.TestBase;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.testng.Assert;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import java.util.Arrays;
+import java.util.NoSuchElementException;
 
 public class AddCustomerTest extends TestBase {
 
 
     @Test
-    public void add() {
+    public void add() throws InterruptedException {
+        Thread.sleep(4000);
         driver.findElement(By.xpath(OR.getProperty("accountTab"))).click();
         driver.findElement(By.xpath(OR.getProperty("newAccount"))).click();
-        driver.findElement(By.xpath("//div/div/div/div/div/input")).sendKeys("Hel");
-        driver.findElement(By.xpath("//li/a/div[2]/div[2]")).click();
 
-        driver.findElement(By.linkText("Analyst")).click();
-       {
-            WebElement element = driver.findElement(By.linkText("Analyst"));
-           Actions builder = new Actions(driver);
-          builder.moveToElement(element).perform();
+        type("accountName_XPATH", "Gazprom");
+        try {
+            click("accountNameChoice_XPATH");
+
+        } catch (NoAlertPresentException ex) {
+        }catch(NoSuchElementException e) {}
+
+        Thread.sleep(4000);
+        driver.findElement(By.xpath("//span[contains(text(),'Type')]/../../div/div/div/div/a")).click();
+
+        {
+            WebElement element = driver.findElement(By.xpath("//a[contains(text(),'Competitor')]"));
+            Actions builder = new Actions(driver);
+            builder.moveToElement(element).perform();
         }
+        {
+            WebElement element = driver.findElement(By.xpath("//div[2]/div/div/div/div/div/div/div/div/a"));
+            Actions builder = new Actions(driver);
+            builder.moveToElement(element, 0, 0).perform();
+        }
+        driver.findElement(By.linkText("Competitor")).click();
 
-   Assert.assertFalse(true);
-        Assert.assertFalse(false);
-//
-//        {
-//            WebElement element = driver.findElement(By.xpath("//li/a/div[2]/div[2]"));
-//            Actions builder = new Actions(driver);
-//            builder.moveToElement(element).perform();
-//        }
-//      {
-//           WebElement element = driver.findElement(By.tagName("body"));
-//          Actions builder = new Actions(driver);
-//           builder.moveToElement(element, 0, 0).perform();
-//        }
+
+
+        driver.findElement(By.xpath("//fieldset/div/div/button/span")).click();
+    //    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[contains(@placeholder,'Enter address')]")));
+        driver.findElement(By.xpath("//input[contains(@placeholder,'Enter address')]")).click();
+   //     wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[contains(@placeholder,'Enter address')]")));
+        driver.findElement(By.xpath("//input[contains(@placeholder,'Enter address')]")).sendKeys("Essen, Germany");
+ //       wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'firstLine')]")));
+        driver.findElement(By.xpath("//div[contains(@class,'firstLine')]")).click();
+//        click("billingAddress_XPATH");
+//        Thread.sleep(10000);
+//        type("addressSearch_XPATH", "ess");
+        Thread.sleep(50000);
+
+
+
+
+
     }
 }
-
-
-//        driver.findElement(By.xpath("//div/div/div/div/div/input")).sendKeys("Hello");
-//        driver.findElement(By.linkText("--None--")).click();
-//        {
-//            WebElement element = driver.findElement(By.linkText("--None--"));
-//            Actions builder = new Actions(driver);
-//            builder.moveToElement(element).perform();
-//        }
-//     //   driver.findElement(By.xpath(OR.getProperty("accountName"))).sendKeys("accountName");
-//    }
-//}
 
 //    @Test(dataProvider = "getData")
 //
