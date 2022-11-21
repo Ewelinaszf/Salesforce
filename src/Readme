@@ -1,0 +1,16 @@
+On Excel sheet add your credentials (C:\Salesforce\src\test\resources\excel\excel.xlsx)
+
+How to Bypass Login Verification in Salesforce
+
+If you or other users are consistently logging in from the same computer, you may want to bypass the step of login verification.
+This is something that can be done by updating the Login IP Ranges to whitelist users.
+You can do this within the Setup menu – here’s how to find it:
+
+1. Navigate to the Setup Menu.
+2. In the left-hand menu, navigate to
+Administration > Users > Profiles.
+3. Select the Profile for the User or Users you want to bypass the Login Verification Code for.
+4. Next, under System, Select ‘Login IP Ranges.’ Then, select ‘Add IP Ranges.’
+5. Enter the IP Address Range for the User you want to bypass Login Verification codes for.
+You may also want to add a description to differentiate the different IPs.
+6. When you’re done, select Save. And if you want to add another user for this profile, select Save & New.

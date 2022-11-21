@@ -1,6 +1,11 @@
-15/11/2022 08:07:20 devpinoyLogger Config file loaded
-15/11/2022 08:07:20 devpinoyLogger OR file loaded
-15/11/2022 08:07:22 devpinoyLogger Chrome Launched 
-15/11/2022 08:07:25 devpinoyLogger Navigate to : https://jobinterview.lightning.force.com/lightning/page/home
-15/11/2022 08:07:25 devpinoyLogger Inside Login Test
-15/11/2022 08:07:43 devpinoyLogger TEST EXECUTION COMPLETED !!!
+21/11/2022 09:08:31 devpinoyLogger Config file loaded
+21/11/2022 09:08:31 devpinoyLogger OR file loaded
+21/11/2022 09:08:34 devpinoyLogger Chrome Launched 
+21/11/2022 09:08:35 devpinoyLogger Navigate to : https://jobinterview4.my.salesforce.com
+21/11/2022 09:08:35 devpinoyLogger Inside Login Test
+21/11/2022 09:08:40 devpinoyLogger Creating new Account
+21/11/2022 09:08:47 devpinoyLogger Gazprom - Element wasn't clicked
+21/11/2022 09:08:51 devpinoyLogger Editing new created account
+21/11/2022 09:08:51 devpinoyLogger Editing new created account
+21/11/2022 09:08:53 devpinoyLogger Verifing if types was edited
+21/11/2022 09:08:55 devpinoyLogger TEST EXECUTION COMPLETED !!!

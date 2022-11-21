@@ -1,19 +1,11 @@
 package testcases;
 
 import base.TestBase;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Cookie;
 import org.openqa.selenium.NoAlertPresentException;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Reporter;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
 import java.time.Duration;
 import java.util.Arrays;
 
@@ -30,22 +22,10 @@ public class LoginToTheWebsiteTest extends TestBase {
 
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ZERO );
-         //   Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-         //   String text = alert.getText();
-          //  alert.accept();
-
         } catch (NoAlertPresentException ex) {}
 
     }
 
-
-        //    Assert.assertTrue(isElementPresent(By.cssSelector(OR.getProperty("addCustomerButton", "Login not successful"))));
-//        log.debug("User successfully login");
-        //       Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-//        Assert.assertTrue(alert.getText().contains(alertText));
-//        Thread.sleep(5000);
-//        alert.accept();
-    
 
 
     @DataProvider(name="org")

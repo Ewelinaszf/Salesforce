@@ -2,44 +2,38 @@ package base;
 
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
-import com.relevantcodes.extentreports.LogStatus;
 import listeners.CustomListeners;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 import java.io.*;
-import java.time.Duration;
-import java.util.Date;
 import java.util.NoSuchElementException;
 import java.util.Properties;
-import java.util.StringTokenizer;
 import java.util.concurrent.TimeUnit;
-import org.openqa.selenium.Cookie;
+
+import pages.AccountsForm;
+import pages.HomePage;
 import utilities.*;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class TestBase {
-    String username = "ewelinabachata-usbg@force.com";
-    String password="Ly5hnn86";
+
     public static WebDriver driver;
     public static Properties config = new Properties();
     public static Properties OR = new Properties();
     public static FileInputStream fis;
     public static ExcelReader excel = new ExcelReader(System.getProperty("user.dir") + "\\src\\test\\resources\\excel\\excel.xlsx");
     public JavascriptExecutor js = (JavascriptExecutor) driver;
-//    public static WebDriverWait wait  = new WebDriverWait(driver, Duration.ofSeconds(10));;
-    //  public static ExtentReports extent = ExtentManager.getInstance();
- //   public static ExtentTest extentTest;
+    public HomePage homePage;
+    AccountsForm accountsForm;
+
 
     public static Logger log = Logger.getLogger("devpinoyLogger");
 
@@ -88,26 +82,19 @@ public class TestBase {
 
         driver.get(config.getProperty("testsiteurl"));
         log.debug("Navigate to : "+config.getProperty("testsiteurl"));
-        driver.manage().
-
-    window().
-
-    maximize();
-        driver.manage().
-
-    timeouts().
-
-    implicitlyWait(Integer.parseInt(config.getProperty("implicit.wait")),TimeUnit.SECONDS);
-
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Integer.parseInt(config.getProperty("implicit.wait")),TimeUnit.SECONDS);
+        homePage = new HomePage();
+        accountsForm = new AccountsForm();
 }
 
 
     @AfterSuite
     public void tearDown() {
 
-//        if (driver != null) {
-//          driver.quit();
-//        }
+        if (driver != null) {
+          driver.quit();
+        }
         log.debug("TEST EXECUTION COMPLETED !!!");
     }
 
@@ -121,11 +108,8 @@ public class TestBase {
     }
 
     public static void verifyEquals(String expected, String actual) throws IOException {
-
         try {
-
             Assert.assertEquals(actual, expected);
-
         } catch (Throwable t) {
 
             TestUtilities.captureScreenshot();
@@ -167,8 +151,33 @@ public class TestBase {
         Reporter.log("Typing in: " + locator + " entered value as " + value);
     }
 
+    public String get(String locator) {
+        String value="null";
+        if (locator.endsWith("_CSS")) {
+             value = driver.findElement(By.cssSelector(OR.getProperty(locator))).getText();
+        } else if (locator.endsWith("_XPATH")) {
+            value =driver.findElement(By.xpath(OR.getProperty(locator))).getText();
+        } else if (locator.endsWith("_ID")) {
+            value = driver.findElement(By.id(OR.getProperty(locator))).getText();
+        }
+        Reporter.log( "Value: " + locator);
+        return value;
+    }
 
 
+    public void selectValueFromList(String nameFromSelectList) {
+        {
+            WebElement element = driver.findElement(By.xpath("//a[contains(text(),'"+nameFromSelectList+"')]"));
+            Actions builder = new Actions(driver);
+            builder.moveToElement(element).perform();
+        }
+        {
+            WebElement element = driver.findElement(By.xpath("//div[2]/div/div/div/div/div/div/div/div/a"));
+            Actions builder = new Actions(driver);
+            builder.moveToElement(element, 0, 0).perform();
+        }
+        driver.findElement(By.linkText(nameFromSelectList)).click();
+    }
 
 }
 

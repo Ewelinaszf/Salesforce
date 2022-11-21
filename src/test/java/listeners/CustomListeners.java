@@ -54,22 +54,6 @@ public class CustomListeners extends TestBase implements ITestListener, ISuiteLi
         Markup m = MarkupHelper.createLabel(failureLogg, ExtentColor.RED);
         testReport.get().log(Status.FAIL, m);
 
-//        System.setProperty("org.uncommons.reportng.escape-output","false");
-//
-//        Reporter.log("Capturing screenshot");
-//        try {
-//            TestUtilities.captureScreenshot();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-
-//        Reporter.log("<a target=\"_blank\" href="+ TestUtilities.screenshotName2+">Screenshot</a>");
-//        Reporter.log("<br>");
-//        Reporter.log("<a target=\"_blank\" href="+ TestUtilities.screenshotName2+"><img src="+ TestUtilities.screenshotName2+" height=200 width=200></img></a>");
-
-//        Reporter.log("<a target=\"_blank\" href="+ "C:\\Salesforce\\screenshot\\error.jpg\">Screenshot</a>");
-//        Reporter.log("<br>");
-//        Reporter.log("<a target=\"_blank\" href="+ "C:\\Salesforce\\screenshot\\error.jpg><img src=\"+ \"C:\\Salesforce\\screenshot\\error.jpg\" height=200 width=200></img></a>");
     }
 
 

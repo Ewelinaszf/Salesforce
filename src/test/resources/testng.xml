@@ -14,11 +14,17 @@
         </classes>
     </test>
 
-    <test name="Add Customer Test">
+    <test name="Add New Account Test">
         <classes>
-            <class name="testcases.AddCustomerTest"/>
+            <class name="testcases.AddNewAccount"/>
         </classes>
 
     </test>
+
+<!--    <test name="Edit New Created Account Test">-->
+<!--        <classes>-->
+<!--            <class name="testcases.EditNewCreatedAccount"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
 </suite>

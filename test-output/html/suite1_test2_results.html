@@ -3,101 +3,78 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
 <head>
-  <title>Test Results Report - Add Customer Test</title>
+  <title>Test Results Report - Add New Account Test</title>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <meta name="description" content="TestNG unit test results." />
   <link href="reportng.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="reportng.js"></script>
 </head>
 <body>
-<h1>Add Customer Test</h1>
+<h1>Add New Account Test</h1>
 <p>
-  Test duration: 21.458s
+  Test duration: 18.846s
 </p>
 
 
 
+
+
   <table class="resultsTable">
-    <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
+    <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
           <tr>
-        <td colspan="3" class="group">testcases.AddCustomerTest</td>
+        <td colspan="3" class="group">testcases.AddNewAccount</td>
       </tr>
             
 <tr>
   <td class="method">
-                  add
+                  editNewCreatedAccount
       </td>
   <td class="duration">
-    15.867s
+    2.969s
   </td>
   <td class="result">
         
     
             <div class="testOutput">
-                        Typing in: accountName_XPATH entered value as Gazprom<br />
+                        Click on: type_XPATH<br />
+                                Click on: saveButton_XPATH<br />
+                                Click on: detailsTab_XPATH<br />
+                                Value: typeInDetails_XPATH<br />
                   </div>
     
 
-        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains(@title,&apos;Gazprom&apos;)]&quot;}<br/>
-&nbsp; (Session info: chrome=107.0.5304.107)<br/>
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element<br/>
-Build info: version: &apos;4.6.0&apos;, revision: &apos;79f1c02ae20&apos;<br/>
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.13&apos;<br/>
-Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>
-Command: [bdeecc3c3f3d2cedd3bf220be97f4c49, findElement {using=xpath, value=//div[contains(@title,&apos;Gazprom&apos;)]}]<br/>
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\ESZYMA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56161}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56161/devtoo..., se:cdpVersion: 107.0.5304.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}<br/>
-Session ID: bdeecc3c3f3d2cedd3bf220be97f4c49</b></a><br />
-    <div class="stackTrace" id="exception-0">
-              java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br />
-              java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)<br />
-              java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br />
-              java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)<br />
-              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)<br />
-              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)<br />
-              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)<br />
-              org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)<br />
-              org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)<br />
-              org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)<br />
-              org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)<br />
-              org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)<br />
-              base.TestBase.click(TestBase.java:151)<br />
-              testcases.AddCustomerTest.add(AddCustomerTest.java:30)<br />
-              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
-              java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
-              java.base/java.lang.reflect.Method.invoke(Method.java:566)<br />
-              org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br />
-              org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)<br />
-              org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)<br />
-              org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)<br />
-              org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)<br />
-              org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)<br />
-              org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)<br />
-              org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br />
-              java.base/java.util.ArrayList.forEach(ArrayList.java:1541)<br />
-              org.testng.TestRunner.privateRun(TestRunner.java:806)<br />
-              org.testng.TestRunner.run(TestRunner.java:601)<br />
-              org.testng.SuiteRunner.runTest(SuiteRunner.java:433)<br />
-              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)<br />
-              org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)<br />
-              org.testng.SuiteRunner.run(SuiteRunner.java:330)<br />
-              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
-              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br />
-              org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)<br />
-              org.testng.TestNG.runSuitesLocally(TestNG.java:1176)<br />
-              org.testng.TestNG.runSuites(TestNG.java:1099)<br />
-              org.testng.TestNG.run(TestNG.java:1067)<br />
-              com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)<br />
-              com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)<br />
-                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  goToMyAccounts
+      </td>
+  <td class="duration">
+    11.282s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        Click on: accountTab_XPATH<br />
+                                Click on: newAccount_XPATH<br />
+                                Typing in: accountName_XPATH entered value as Gazprom<br />
+                                Click on: accountNameChoice_XPATH<br />
+                                Click on: type_XPATH<br />
+                                Click on: industry_XPATH<br />
+                                Value: accountNameInput_XPATH<br />
+                                Click on: saveButton_XPATH<br />
+                                Value: nameOfTheCreatedAccount_XPATH<br />
+                                Value: phoneOfTheCreatedAccount_XPATH<br />
+                                Value: nameOfTheCreatedAccount_XPATH<br />
+                                Value: phoneOfTheCreatedAccount_XPATH<br />
+                                Click on: editNewCreatedAccount_XPATH<br />
+                  </div>
+    
+
       </td>
 </tr>
       </table>
-
-
   
 </body>
 </html>
