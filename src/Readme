@@ -1,4 +1,6 @@
-On Excel sheet add your credentials (C:\Salesforce\src\test\resources\excel\excel.xlsx)
+On Excel sheet add your credentials (C:\Salesforce\src\test\resources\excel\excel.xlsx):
+A2 - username, B2 - password
+
 
 How to Bypass Login Verification in Salesforce
 
